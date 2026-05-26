@@ -1,0 +1,149 @@
+// =============================================================================
+// GLOBAL STYLES — Dans Ma Cabane
+// =============================================================================
+
+@use "variables" as *;
+@use "mixins" as *;
+
+@use "page";
+
+// CSS Custom Properties (pour usage dans les composants sans SCSS)
+:root {
+  --color-bg:         #{$color-bg};
+  --color-bg-alt:     #{$color-bg-alt};
+  --color-surface:    #{$color-surface};
+  --color-border:     #{$color-border};
+  --color-accent:     #{$color-accent};
+  --color-accent-dim: #{$color-accent-dim};
+  --color-text:       #{$color-text};
+  --color-text-muted: #{$color-text-muted};
+  --color-red:        #{$color-red};
+  --nav-height:       #{$nav-height};
+  --transition-base:  #{$transition-base};
+  --transition-slow:  #{$transition-slow};
+}
+
+// Reset
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-ui;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// Typography base
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.75;
+  color: $color-text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// Selection
+::selection {
+  background-color: $color-accent;
+  color: $color-bg;
+}
+
+// Scrollbar (Webkit)
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $color-bg;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-border;
+  border-radius: 3px;
+
+  &:hover {
+    background: $color-text-muted;
+  }
+}
+
+// Page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition-base, transform $transition-base;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+// Utility classes
+.sr-only {
+  @include visually-hidden;
+}
+
+.container {
+  @include container;
+}
+
+.text-accent {
+  color: $color-accent;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-mono {
+  @include text-mono;
+}
+
+.m-none {
+  margin: 0!important;
+}

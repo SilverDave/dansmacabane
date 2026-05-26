@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "home": "Home",
+    "music": "Music",
+    "video": "Video",
+    "locaux": "Rooms",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Express yourself fully",
+      "subtitle": "Be the next one to enter the cabin",
+      "cta": "Request a room",
+      "ctaSecondary": "Explore rooms",
+      "since": "Since {year}"
+    },
+    "about": {
+      "title": "The Cabin",
+      "lead": "Since 2001, Dans Ma Cabane has offered musicians and creators a stable, accessible, and inspiring place.",
+      "body": "Our mission is to preserve a genuine space dedicated to musical creation in Liège, where artists can work under good conditions, freely, with special attention to respect, safety, comfort and sound quality.",
+      "body2": "More than just a set of rehearsal rooms, Dans Ma Cabane is a place of encounter, exchange, and continuity for the local music scene for over 20 years.",
+      "yearsLabel": "years of existence",
+      "locauxLabel": "available rooms",
+      "artistsLabel": "artists welcomed"
+    },
+    "cta": {
+      "title": "Ready to create?",
+      "subtitle": "Join the community and book your space today.",
+      "btn": "Sign up"
+    }
+  },
+  "music": {
+    "title": "Music",
+    "subtitle": "Artists from the cabin",
+    "playlist": "Listen to the playlist",
+    "listenOn": "Listen on",
+    "empty": "No tracks available at the moment."
+  },
+  "video": {
+    "title": "Video",
+    "subtitle": "Filmed in the cabin",
+    "watch": "Watch",
+    "empty": "No videos available at the moment."
+  },
+  "locaux": {
+    "title": "Rehearsal Rooms",
+    "subtitle": "Spaces in the cabin designed for musicians",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "surface": "{n} m²",
+    "capacity": "{n} persons max",
+    "groundFloor": "Ground floor",
+    "firstFoor": "First floor",
+    "shared": "for shared",
+    "book": "Book this room",
+    "contact": "Contact us",
+    "seeAll": "See all rooms",
+    "localesInfo": {
+      "label": "The building",
+      "title": "Rehearsal Rooms",
+      "lead": "Entirely dedicated to musicians and bands, active for over 20 years.",
+
+      "location": {
+        "title": "Find us",
+        "address": "Saint-Léonard district, Liège",
+        "tram": "Tram — Coronmeuse, Parc Astrid stop",
+        "bus": "Bus — several lines nearby"
+      },
+
+      "charges": {
+        "title": "All inclusive",
+        "eau": "Water",
+        "electricite": "Electricity",
+        "internet": "Internet",
+        "dechets": "Waste management",
+        "nettoyage": "Common area cleaning"
+      },
+
+      "amenities": {
+        "title": "The building",
+        "dechargement": "Secure loading/unloading area",
+        "parking": "Easy street parking",
+        "cuisine": "Shared kitchen & lounge",
+        "acces": "Secure access",
+        "cameras": "Surveillance cameras",
+        "portes": "Purpose-built doors with careful soundproofing",
+        "ambiance": "Respectful atmosphere between musicians"
+      },
+
+      "conditions": {
+        "title": "Monthly rental",
+        "body1": "The premises are let unfurnished. The rent may be shared between several musicians or bands, provided that the occupants are registered and included in the lease in accordance with the terms of the tenancy agreement.",
+        "body2": "The space is usually fully booked, enquiries should be made by contacting us and providing a brief outline of the musical project.",
+        "cta": "Get in touch"
+      },
+
+      "contact": "For more information or to arrange a visit, send us a few details about your band or how you plan to use the space.",
+      "contactCta": "Send a message"
+    }
+  },
+  "commonGallery": {
+    "title": "The Commons",
+    "subtitle": "Spaces designed for musicians",
+    "countPhoto": "{n} photos",
+    "countVideo": "{n} videos",
+    "seeAll": "See all photos →",
+    "entree": "Entrance and loading area",
+    "spaceLoad": "Interior cargo area",
+    "Ititatnita": "It it anita",
+    "scale": "Access to the first floor",
+    "spaceChill": "Living area with kitchenette"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "A question? A booking? We're here.",
+    "form": {
+      "name": "Name / Band",
+      "namePlaceholder": "Your name or band name",
+      "email": "Email",
+      "emailPlaceholder": "your{'@'}email.com",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+32 4XX XX XX XX",
+      "projectType": "Project type",
+      "projectTypes": {
+        "repetition": "Rehearsal",
+        "autre": "Other"
+      },
+      "local": "Preferred room (optional)",
+      "localPlaceholder": "Choose a room",
+      "dates": "Preferred dates (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us everything...",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent! We'll get back to you very soon.",
+      "error": "Error sending message. Try again or contact us directly.",
+      "required": "Required field"
+    },
+    "info": {
+      "title": "Practical info",
+      "address": "Address",
+      "hours": "Opening hours",
+      "hoursValue": "Mon–Fri: 9am–10pm | Sat–Sun: 10am–8pm",
+      "phone": "Phone",
+      "email": "Email"
+    }
+  },
+  "footer": {
+    "tagline": "Rehearsal rooms in Liège since 2001",
+    "location": "Liège • Belgium",
+    "rights": "© {year} Dans Ma Cabane. All rights reserved.",
+    "madeBy": "Website by",
+    "nav": "Navigation",
+    "social": "Social"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "readMore": "Read more",
+    "lang": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Dans Ma Cabane — Rehearsal Rooms in Liège",
+      "description": "Since 2001, Dans Ma Cabane offers musicians a stable, accessible and inspiring place in Liège. Rehearsal, recording, creation."
+    },
+    "music": {
+      "title": "Music — Dans Ma Cabane",
+      "description": "Discover the artists who rehearse and record at Dans Ma Cabane."
+    },
+    "video": {
+      "title": "Video — Dans Ma Cabane",
+      "description": "Live sessions, clips and reports from the rehearsal rooms."
+    },
+    "locaux": {
+      "title": "Rooms — Dans Ma Cabane",
+      "description": "Soundproofed, equipped and accessible rehearsal spaces in Liège."
+    },
+    "contact": {
+      "title": "Contact — Dans Ma Cabane",
+      "description": "Book your room or contact us with any questions."
+    }
+  }
+}

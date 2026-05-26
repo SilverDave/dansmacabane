@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "music": "Musique",
+    "video": "Vidéo",
+    "locaux": "Locaux",
+    "contact": "Contact",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Exprime toi à fond",
+      "subtitle": "Sois le prochain à entrer dans la cabane",
+      "cta": "Demander un local",
+      "ctaSecondary": "Découvrir les locaux",
+      "since": "Depuis {year}"
+    },
+    "about": {
+      "title": "La Cabane",
+      "lead": "Depuis 2001, Dans Ma Cabane offre aux musiciens et créateurs un lieu stable, accessible et inspirant.",
+      "body": "Notre mission est de préserver un véritable espace dédié à la création musicale à Liège, où les artistes peuvent travailler dans de bonnes conditions, en toute liberté, avec une attention particulière portée au respect, à la sécurité, au confort et à la qualité sonore.",
+      "body2": "Plus qu'un simple ensemble de locaux, Dans Ma Cabane est un lieu de rencontre, d'échange et de continuité pour la scène musicale locale depuis plus de 20 ans.",
+      "yearsLabel": "ans d'existence",
+      "locauxLabel": "locaux disponibles",
+      "artistsLabel": "artistes accueillis"
+    },
+    "cta": {
+      "title": "Prêt à créer ?",
+      "subtitle": "Rejoins la communauté et réserve ton espace dès aujourd'hui.",
+      "btn": "Inscription"
+    }
+  },
+  "music": {
+    "title": "Musique",
+    "subtitle": "Les artistes de la cabane",
+    "playlist": "Écouter la playlist",
+    "listenOn": "Écouter sur",
+    "empty": "Aucun track disponible pour le moment."
+  },
+  "video": {
+    "title": "Vidéo",
+    "subtitle": "Vidéos filmées dans la cabane",
+    "watch": "Regarder",
+    "empty": "Aucune vidéo disponible pour le moment."
+  },
+  "locaux": {
+    "title": "Les Locaux",
+    "subtitle": "Des cabanes conçus pour les musiciens",
+    "available": "Disponible",
+    "unavailable": "Indisponible",
+    "surface": "{n} m²",
+    "capacity": "{n} personnes max",
+    "groundFloor": "Plain-pied",
+    "firstFoor": "Premier étage",
+    "shared": "en colocation",
+    "book": "Réserver ce local",
+    "contact": "Nous contacter",
+    "seeAll": "Voir tous les locaux",
+    "localesInfo": {
+      "label": "Le bâtiment",
+      "title": "Les Locaux de Répétition",
+      "lead": "Entièrement dédié aux musiciens et groupes de musique, actif depuis plus de 20 ans.",
+
+      "location": {
+        "title": "Où nous trouver",
+        "address": "Quartier Saint-Léonard, Liège",
+        "tram": "Tram — Coronmeuse, Arrêt Parc Astrid",
+        "bus": "Bus — plusieurs lignes à proximité"
+      },
+
+      "charges": {
+        "title": "Charges comprises",
+        "eau": "Eau",
+        "electricite": "Électricité",
+        "internet": "Internet",
+        "dechets": "Gestion des déchets",
+        "nettoyage": "Nettoyage des espaces communs"
+      },
+
+      "amenities": {
+        "title": "Le bâtiment",
+        "dechargement": "Zone de déchargement sécurisée",
+        "parking": "Parking facile dans la rue",
+        "cuisine": "Cuisine et salon commun",
+        "acces": "Accès sécurisé",
+        "cameras": "Caméras de surveillance",
+        "portes": "Portes adaptées et isolation soignée",
+        "ambiance": "Ambiance respectueuse entre musiciens"
+      },
+
+      "conditions": {
+        "title": "Location mensuelle",
+        "body1": "Les locaux sont loués vides. La répartition du loyer entre plusieurs musiciens ou groupes est possible, sous réserve que les occupants soient déclarés et repris conformément aux conditions du bail.",
+        "body2": "Le lieu étant généralement complet, les demandes se font sur prise de contact et présentation rapide du projet musical.",
+        "cta": "Prendre contact"
+      },
+
+      "contact": "Pour plus d'informations ou organiser une visite, envoyez-nous quelques informations sur votre groupe ou votre utilisation du local.",
+      "contactCta": "Envoyer un message"
+    }
+  },
+  "commonGallery": {
+    "title": "Les communs",
+    "subtitle": "Des espaces conçus pour les musiciens",
+    "countPhoto": "{n} photos",
+    "countVideo": "{n} videos",
+    "seeAll": "Voir toutes les photos →",
+    "entree": "Entrée et zone de chargement",
+    "spaceLoad": "Espace de chargement à l'intérieur",
+    "Ititatnita": "It it anita",
+    "scale": "Accès premier étage",
+    "spaceChill": "Espace salon avec kitchinette"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question ? Une réservation ? On est là.",
+    "form": {
+      "name": "Nom / Groupe",
+      "namePlaceholder": "Ton nom ou celui de ton groupe",
+      "email": "Email",
+      "emailPlaceholder": "ton{'@'}email.com",
+      "phone": "Téléphone (optionnel)",
+      "phonePlaceholder": "+32 4XX XX XX XX",
+      "projectType": "Type de projet",
+      "projectTypes": {
+        "repetition": "Répétition",
+        "autre": "Autre"
+      },
+      "local": "Local souhaité (optionnel)",
+      "localPlaceholder": "Choisis un local",
+      "dates": "Dates souhaitées (optionnel)",
+      "message": "Message",
+      "messagePlaceholder": "Dis-nous tout...",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé ! On te revient très vite.",
+      "error": "Erreur lors de l'envoi. Réessaie ou contacte-nous directement.",
+      "required": "Champ obligatoire"
+    },
+    "info": {
+      "title": "Infos pratiques",
+      "address": "Adresse",
+      "hours": "Horaires",
+      "phone": "Téléphone",
+      "email": "Email"
+    }
+  },
+  "footer": {
+    "tagline": "Locaux de répétition depuis 2001",
+    "location": "Liège • Belgique",
+    "rights": "© {year} Dans Ma Cabane. Tous droits réservés.",
+    "madeBy": "Site réalisé par",
+    "nav": "Navigation",
+    "social": "Réseaux"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "back": "Retour",
+    "readMore": "En savoir plus",
+    "lang": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Dans Ma Cabane — Locaux de répétition à Liège",
+      "description": "Depuis 2001, Dans Ma Cabane offre aux musiciens un lieu stable, accessible et inspirant à Liège. Répétition, enregistrement, création."
+    },
+    "music": {
+      "title": "Musique — Dans Ma Cabane",
+      "description": "Découvrez les artistes qui répètent et enregistrent Dans Ma Cabane."
+    },
+    "video": {
+      "title": "Vidéo — Dans Ma Cabane",
+      "description": "Sessions live, clips et reportages depuis les locaux de répétition."
+    },
+    "locaux": {
+      "title": "Locaux — Dans Ma Cabane",
+      "description": "Des espaces de répétition insonorisés, équipés et accessibles à Liège."
+    },
+    "booking": {
+      "title": "Booking & Contact — Dans Ma Cabane",
+      "description": "Réserve ton local ou contacte-nous pour toute question."
+    }
+  }
+}
