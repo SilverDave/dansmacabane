@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/stores/app.store'
 import AppNav from '@/components/layout/AppNav.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 

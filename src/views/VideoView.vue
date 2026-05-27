@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useVideoStore } from '@/stores'
+import { useVideoStore } from '@/stores/video.store'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 const { t } = useI18n()

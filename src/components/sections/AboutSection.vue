@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useLocauxStore } from '@/stores';
+import { useLocauxStore } from '@/stores/locaux.store';
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 const { t } = useI18n()

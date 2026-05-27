@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/stores/app.store'
 import { useLocale } from '@/composables/useLocale'
 import type { NavItem } from '@/types'
 

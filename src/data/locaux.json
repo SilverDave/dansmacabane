@@ -1,0 +1,157 @@
+[
+  {
+    "id": "big-foot",
+    "name": "Big Foot",
+    "surface": 58,
+    "images": [
+      "/images/locaux/big-foot/1.png",
+      "/images/locaux/big-foot/2.png",
+      "/images/locaux/big-foot/3.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": false
+  },
+  {
+    "id": "da-vinci",
+    "name": "Da Vinci",
+    "surface": 37,
+    "images": [
+      "/images/locaux/da-vinci/2.png",
+      "/images/locaux/da-vinci/1.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": false
+  },
+  {
+    "id": "au-balcon",
+    "name": "Au Balcon",
+    "surface": 37,
+    "images": [
+      "/images/locaux/au-balcon/2.png",
+      "/images/locaux/au-balcon/1.png",
+      "/images/locaux/au-balcon/3.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": false
+  },
+  {
+    "id": "dans-les-airs",
+    "name": "Dans les Airs",
+    "surface": 32,
+    "images": [
+      "/images/locaux/dans-les-airs/1.png",
+      "/images/locaux/dans-les-airs/2.png"
+    ],
+    "available": true,
+    "shared": true,
+    "groundFloor": false
+  },
+  {
+    "id": "montreal",
+    "name": "Montreal",
+    "surface": 27,
+    "images": [
+      "/images/locaux/montreal/1.png",
+      "/images/locaux/montreal/2.png",
+      "/images/locaux/montreal/3.png",
+      "/images/locaux/montreal/4.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "el-capo",
+    "name": "El Capo",
+    "surface": 32,
+    "images": [
+      "/images/locaux/el-capo/1.png",
+      "/images/locaux/el-capo/2.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "fools",
+    "name": "Fools",
+    "surface": 28,
+    "images": [
+      "/images/locaux/fools/1.png",
+      "/images/locaux/fools/2.png",
+      "/images/locaux/fools/3.jpg",
+      "/images/locaux/fools/4.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "danilo",
+    "name": "Danilo",
+    "surface": 18,
+    "images": ["/images/locaux/danilo/1.png"],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "diamante",
+    "name": "Diamante",
+    "surface": 14,
+    "images": ["/images/locaux/diamante/1.png"],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "vigneron",
+    "name": "Vigneron",
+    "surface": 15,
+    "images": [
+      "/images/locaux/vigneron/1.png",
+      "/images/locaux/vigneron/2.png",
+      "/images/locaux/vigneron/3.png",
+      "/images/locaux/vigneron/4.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "dans-ma-cabane",
+    "name": "Dans ma cabane",
+    "surface": 10,
+    "images": [
+      "/images/locaux/dans-ma-cabane/1.png",
+      "/images/locaux/dans-ma-cabane/2.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "brooklyn",
+    "name": "Brooklyn",
+    "surface": 15,
+    "images": [
+      "/images/locaux/brooklyn/1.png",
+      "/images/locaux/brooklyn/2.png"
+    ],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  },
+  {
+    "id": "siculiana",
+    "name": "Siculiana",
+    "surface": 13,
+    "images": ["/images/locaux/siculiana/1.png"],
+    "available": false,
+    "shared": false,
+    "groundFloor": true
+  }
+]

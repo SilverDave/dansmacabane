@@ -6,7 +6,7 @@ import AboutSection from '@/components/sections/AboutSection.vue'
 import CommonGallery from '@/components/sections/CommonGallery.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import LocalCard from '@/components/common/LocalCard.vue'
-import { useLocauxStore } from '@/stores'
+import { useLocauxStore } from '@/stores/locaux.store'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 const { t } = useI18n()
@@ -43,7 +43,7 @@ onMounted(() => {
 
       <div class="preview__grid">
         <LocalCard
-          v-for="local in locauxStore.availableLocauxOrRandomn"
+          v-for="local in locauxStore.availableLocauxOrRandom"
           :key="local.id"
           :local="local"
           data-reveal

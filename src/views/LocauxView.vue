@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useLocauxStore } from '@/stores'
+import { useLocauxStore } from '@/stores/locaux.store'
 import LocalCard from '@/components/common/LocalCard.vue'
 import CommonGallery from '@/components/sections/CommonGallery.vue'
 import LocalesInfo from '@/components/sections/LocalesInfo.vue'

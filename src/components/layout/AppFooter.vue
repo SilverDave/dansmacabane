@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useSocialStore } from '@/stores'
+import { useSocialStore } from '@/stores/social.store'
 import type { NavItem } from '@/types'
 
 const { t } = useI18n()
