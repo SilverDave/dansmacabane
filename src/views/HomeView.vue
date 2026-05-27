@@ -34,7 +34,7 @@ onMounted(() => {
       <div class="preview__header" data-reveal>
         <div>
           <p class="preview__label">{{ t('locaux.title') }}</p>
-          <h2 class="preview__title">{{ t('locaux.subtitle') }}</h2>
+          <h2 class="preview__title">{{ t('locaux.subtitle' , {n: locauxStore.locaux.length}) }}</h2>
         </div>
         <BaseButton to="/locaux" variant="ghost">
           {{ t('locaux.seeAll') }}
