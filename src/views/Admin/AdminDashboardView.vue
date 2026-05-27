@@ -6,7 +6,7 @@ import { useAuth } from '@/composables/useAuth'
 
 const router      = useRouter()
 const locauxStore = useLocauxStore()
-const { user, emailVerified, metadata, signOut } = useAuth()
+const { user, signOut } = useAuth()
 
 // Écoute Firestore temps réel
 let unsubscribe: (() => void) | null = null
