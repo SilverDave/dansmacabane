@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
@@ -12,20 +12,27 @@ import { useScrollReveal } from '@/composables/useScrollReveal'
 const { t } = useI18n()
 const locauxStore = useLocauxStore()
 const heroRef = ref<HTMLElement | null>(null)
+const mainRef = ref<HTMLElement | null>(null)
 
-useScrollReveal()
+
+useScrollReveal(
+  mainRef,
+  {},
+  computed(() => locauxStore.availableLocauxOrRandom)
+)
 
 // Trigger hero entrance animation after mount
-onMounted(() => {
+onMounted( () => {
   setTimeout(() => {
     const hero = document.querySelector('.hero')
     hero?.classList.add('is-ready')
   }, 100)
 })
+
 </script>
 
 <template>
-  <main>
+  <main ref="mainRef">
     <HeroSection ref="heroRef" />
     <AboutSection />
 
@@ -40,8 +47,10 @@ onMounted(() => {
           {{ t('locaux.seeAll') }}
         </BaseButton>
       </div>
-
-      <div class="preview__grid">
+      <div 
+        class="preview__grid" 
+        v-if="locauxStore.availableLocauxOrRandom?.length"
+      >    
         <LocalCard
           v-for="local in locauxStore.availableLocauxOrRandom"
           :key="local.id"

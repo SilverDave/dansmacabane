@@ -46,7 +46,7 @@
       "/images/locaux/dans-les-airs/2.png"
     ],
     "available": true,
-    "shared": true,
+    "shared": false,
     "groundFloor": false
   },
   {

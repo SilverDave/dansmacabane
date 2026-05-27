@@ -2,16 +2,21 @@
 import { useI18n } from 'vue-i18n'
 import { useLocauxStore } from '@/stores/locaux.store';
 import { useScrollReveal } from '@/composables/useScrollReveal'
+import { computed } from 'vue';
 
 const { t } = useI18n()
 useScrollReveal()
 const locauxStore = useLocauxStore()
 const yearsOld = new Date().getFullYear() - 2001;
-const stats = [
-  { id: "years_old", value: yearsOld, labelKey: 'home.about.yearsLabel' },
-  { id: "locaux", link: "/locaux", value: locauxStore.availableLocaux.length, labelKey: 'home.about.locauxLabel' },
-  { id: "artistes", value: '100+', labelKey: 'home.about.artistsLabel' },
-]
+
+const stats = computed(() => {
+  return  [
+    { id: "years_old", value: yearsOld, labelKey: 'home.about.yearsLabel' },
+    { id: "locaux", link: "/locaux", value: locauxStore.availableLocaux.length, labelKey: 'home.about.locauxLabel' },
+    { id: "artistes", value: '100+', labelKey: 'home.about.artistsLabel' },
+  ]
+})
+
 </script>
 
 <template>

@@ -1,59 +1,177 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import {
+  ref as dbRef,
+  onValue,
+  update,
+  get,
+} from 'firebase/database'
+
+import { db } from '@/lib/firebase'
 import type { Local } from '@/types'
 import locauxData from '@/data/locaux.json'
 
 export const useLocauxStore = defineStore('locaux', () => {
-
   const locaux = ref<Local[]>(locauxData as Local[])
+  const loading = ref(true)
+  const error = ref<string | null>(null)
 
-  // ── Computed ──────────────────────────────────────────────────────────────
+  // ── Écoute temps réel Realtime Database ────────────────────────────────
+  function subscribe() {
+    loading.value = true
+
+    const locauxRef = dbRef(db, 'locaux')
+
+    const unsubscribe = onValue(
+      locauxRef,
+      (snapshot) => {
+        const data = snapshot.val()
+
+        if (!data) {
+          locaux.value = []
+          loading.value = false
+          return
+        }
+
+        locaux.value = Object.entries(data).map(
+          ([id, value]: any) => ({
+          id,
+          name: value.name ?? '',
+          surface: value.surface ?? 0,
+          images: value.images ?? [],
+          available: value.available ?? false,
+          shared: value.shared ?? false,
+          groundFloor: value.groundFloor ?? false,
+        })
+        )
+
+        // Tri par nom
+        locaux.value.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        )
+
+        loading.value = false
+      },
+      (err) => {
+        console.error('[locaux] Realtime Database error:', err)
+
+        error.value = err.message
+        loading.value = false
+      }
+    )
+
+    return unsubscribe
+  }
+
+  // ── Mise à jour d'un local ─────────────────────────────────────────────
+  async function updateLocal(
+    id: string,
+    fields: Partial<Pick<Local, 'available' | 'shared'>>
+  ): Promise<void> {
+    try {
+      await update(dbRef(db, `locaux/${id}`), fields)
+    } catch (err: unknown) {
+      console.error(err)
+
+      error.value =
+        err instanceof Error
+          ? err.message
+          : 'Erreur inconnue'
+    }
+  }
+
+  // ── Chargement unique ──────────────────────────────────────────────────
+  async function fetchOnce(): Promise<void> {
+    loading.value = true
+
+    try {
+      const snapshot = await get(dbRef(db, 'locaux'))
+
+      if (snapshot.exists()) {
+        const data = snapshot.val()
+
+        locaux.value = Object.entries(data).map(
+          ([id, value]: any) => ({
+            id,
+            name: value.name ?? '',
+            surface: value.surface ?? 0,
+            images: value.images ?? [],
+            available: value.available ?? false,
+            shared: value.shared ?? false,
+            groundFloor: value.groundFloor ?? false,
+          })
+        )
+
+        // Tri par nom
+        locaux.value.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        )
+      } else {
+        locaux.value = []
+        console.log('Aucune donnée')
+      }
+    } catch (err: unknown) {
+      console.error(err)
+
+      error.value =
+        err instanceof Error
+          ? err.message
+          : 'Erreur inconnue'
+    } finally {
+      loading.value = false
+    }
+  }
+
+  // ── Computed ───────────────────────────────────────────────────────────
   const availableLocaux = computed(() =>
-    locaux.value.filter(l => l.available)
+    locaux.value.filter((l) => l.available)
   )
 
   const notAvailableLocaux = computed(() =>
-    locaux.value.filter(l => !l.available)
+    locaux.value.filter((l) => !l.available)
   )
 
-  // Retourne les locaux disponibles, ou 3 locaux aléatoires si aucun dispo
   const availableLocauxOrRandom = computed(() => {
-    const available = availableLocaux.value
-    const needed    = 3
+    const available = locaux.value.filter((l) => l.available)
 
-    if (available.length >= needed) return available
-    if (available.length === 0)     return getRandomLocaux(locaux.value, needed)
+    if (available.length >= 3) {
+      return available
+    }
 
-    const fill = getRandomLocaux(notAvailableLocaux.value, needed - available.length)
-    return [...available, ...fill]
+    if (available.length === 0) {
+      return getRandom(locaux.value, 3)
+    }
+
+    return [
+      ...available,
+      ...getRandom(
+        notAvailableLocaux.value,
+        3 - available.length
+      ),
+    ]
   })
 
-  // ── Helpers ───────────────────────────────────────────────────────────────
-  function getRandomLocaux<T>(array: T[], count: number): T[] {
-    const shuffled = [...array]
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-    }
-    return shuffled.slice(0, count)
+  // ── Helpers ────────────────────────────────────────────────────────────
+  function getLocalById(id: string) {
+    return locaux.value.find((l) => l.id === id)
   }
 
-  function getLocalById(id: string): Local | undefined {
-    return locaux.value.find(l => l.id === id)
-  }
-
-  // ── Actions (si tu veux modifier un local depuis l'UI) ────────────────────
-  function setAvailability(id: string, available: boolean): void {
-    const local = getLocalById(id)
-    if (local) local.available = available
+  function getRandom<T>(arr: T[], n: number): T[] {
+    return [...arr]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, n)
   }
 
   return {
     locaux,
+    loading,
+    error,
+    subscribe,
+    updateLocal,
+    fetchOnce,
     availableLocaux,
     notAvailableLocaux,
     availableLocauxOrRandom,
     getLocalById,
-    setAvailability,
   }
 })

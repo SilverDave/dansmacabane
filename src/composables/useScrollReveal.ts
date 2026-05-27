@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, type Ref } from 'vue'
+import { nextTick, onMounted, onUnmounted, watch, type Ref } from 'vue'
 
 interface ScrollRevealOptions {
   threshold?: number
@@ -13,7 +13,8 @@ interface ScrollRevealOptions {
  */
 export function useScrollReveal(
   containerRef?: Ref<HTMLElement | null>,
-  options: ScrollRevealOptions = {}
+  options: ScrollRevealOptions = {},
+  triggerRef?: Ref<unknown> 
 ) {
   const {
     threshold = 0.1,
@@ -24,9 +25,12 @@ export function useScrollReveal(
 
   let observer: IntersectionObserver | null = null
 
-  function observe() {
+  async function observe() {
+    await nextTick()
     const root = containerRef?.value ?? document
     const targets = root.querySelectorAll('[data-reveal]')
+
+    observer?.disconnect();
 
     observer = new IntersectionObserver(
       (entries) => {
@@ -47,6 +51,10 @@ export function useScrollReveal(
 
   onMounted(() => observe())
   onUnmounted(() => observer?.disconnect())
+
+  if (triggerRef) {
+    watch(triggerRef, () => observe())
+  }
 
   return { observe }
 }

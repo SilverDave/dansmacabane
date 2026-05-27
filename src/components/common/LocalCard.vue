@@ -6,7 +6,7 @@ import BaseButton from '@/components/common/BaseButton.vue'
 import ImageLightbox from '@/components/common/ImageLightbox.vue'
 
 const { t } = useI18n()
-defineProps<{ local: Local }>()
+defineProps<{ local?: Local }>()
 
 const lightboxOpen  = ref(false)
 const lightboxIndex = ref(0)
@@ -18,8 +18,7 @@ function openLightbox(index = 0) {
 </script>
 
 <template>
-  <article class="local-card" :class="{ 'local-card--unavailable': !local.available }">
-
+  <article class="local-card" :class="{ 'local-card--unavailable': !local.available }" v-if="local">
     <!-- ── Image / Galerie ─────────────────────────────── -->
     <div class="local-card__gallery">
 
