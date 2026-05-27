@@ -46,7 +46,7 @@
   },
   "locaux": {
     "title": "Les Locaux",
-    "subtitle": "Des cabanes conçus pour les musiciens",
+    "subtitle": "{n} cabanes conçus pour les musiciens",
     "available": "Disponible",
     "unavailable": "Indisponible",
     "surface": "{n} m²",

@@ -42,7 +42,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/contact',
     name: 'contact',
-    component: () => import('@/views/contactView.vue'),
+    component: () => import('@/views/ContactView.vue'),
     meta: {
       titleKey: 'meta.contact.title',
       descriptionKey: 'meta.contact.description',

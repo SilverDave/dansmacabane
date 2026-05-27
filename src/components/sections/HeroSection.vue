@@ -2,6 +2,8 @@
 import { useI18n } from 'vue-i18n'
 
 import BaseButton from '@/components/common/BaseButton.vue'
+import VideoPlayer from '@/components/common/VideoPlayer.vue'
+
 import hendrixGuitar from '@/assets/images/hendrix_guitar.png';
 import pixelShadow from '@/assets/images/pixel_shadow.png';
 
@@ -17,13 +19,23 @@ const { t } = useI18n()
       <div class="hero__bg-gradient" />
     </div>
 
-    <div class="hero__content container">
+    <div class="hero__content container">        
       <div class="hero__text">
-        <h1 class="hero__title" data-reveal>
-          <span class="hero__title-line">Dans</span>
-          <span class="hero__title-line hero__title-line--accent">Ma</span>
-          <span class="hero__title-line">Cabane</span>
-        </h1>
+        <div class="hero__video-and-text">
+          <VideoPlayer
+            class="video-player"
+            src="/videos/home-page/homeVideo.mp4"
+            poster="/videos/home-page/homeVideo.png"
+            label="Ambiance dans la cabane"
+          />
+
+          <h1 class="hero__title" data-reveal>
+            <span class="hero__title-line">Dans</span>
+            <span class="hero__title-line hero__title-line--accent">Ma</span>
+            <span class="hero__title-line">Cabane</span>
+          </h1>
+        </div>         
+        
 
         <p class="hero__tagline" data-reveal>{{ t('home.hero.tagline') }}</p>
         <p class="hero__subtitle" data-reveal>{{ t('home.hero.subtitle') }}</p>
@@ -115,7 +127,7 @@ const { t } = useI18n()
     font-size: clamp(5rem, 10vw, 8rem);
     line-height: 0.9;
     letter-spacing: -0.01em;
-    margin-bottom: $space-8;
+    padding-top: $space-2;
 
     &-line {
       display: block;
@@ -178,6 +190,20 @@ const { t } = useI18n()
     .hero__ctas {
       opacity: 1;
       transform: none;
+    }
+  }
+  &__video-and-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space-8;
+
+    > .video-player {
+      width: clamp(8rem, 15vw, 12rem);
+      margin: 0 $space-8 0 0;
+
+       @include max-xs {
+        display: none;
+       }
     }
   }
 }

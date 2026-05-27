@@ -30,7 +30,7 @@ const locaux = computed(() => {
   <main class="page">
     <div class="page-hero container">
       <p class="page-hero__label">{{ t('nav.locaux') }}</p>
-      <p class="page-hero__sub">{{ t('locaux.subtitle') }}</p>
+      <p class="page-hero__sub">{{ t('locaux.subtitle', { n: locauxStore.locaux.length }) }}</p>
     </div>
     <div class="locaux container">
       <div class="locaux__grid">

@@ -187,6 +187,11 @@ const isActive = (path: string) =>
     display: flex;
     align-items: center;
     gap: $space-4;
+    
+    @include max-xs { 
+      gap: $space-1;
+      flex-wrap: wrap;
+    }
   }
 
   &__lang {

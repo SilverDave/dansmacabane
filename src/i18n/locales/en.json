@@ -46,7 +46,7 @@
   },
   "locaux": {
     "title": "Rehearsal Rooms",
-    "subtitle": "Spaces in the cabin designed for musicians",
+    "subtitle": "{n} spaces in the cabin designed for musicians",
     "available": "Available",
     "unavailable": "Unavailable",
     "surface": "{n} m²",
