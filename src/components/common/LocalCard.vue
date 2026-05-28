@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Local } from '@/types'
 import BaseButton from '@/components/common/BaseButton.vue'
+import BaseImage from '@/components/common/BaseImage.vue'
 import ImageLightbox from '@/components/common/ImageLightbox.vue'
 
 const { t } = useI18n()
@@ -29,7 +30,7 @@ function openLightbox(index = 0) {
         :aria-label="`Voir les photos de ${local.name}`"
         :disabled="!local.images.length"
       >
-        <img
+        <BaseImage
           v-if="local.images[0]"
           :src="local.images[0]"
           :alt="local.name"
@@ -69,7 +70,7 @@ function openLightbox(index = 0) {
           @click="openLightbox(i)"
           :aria-label="`Photo ${i + 1} de ${local.name}`"
         >
-          <img :src="img" :alt="`${local.name} — ${i + 1}`" loading="lazy"/>
+          <BaseImage :src="img" :alt="`${local.name} — ${i + 1}`" loading="lazy"/>
           <!-- "+N" overlay sur la 4e vignette si > 4 photos -->
           <span v-if="i === 3 && local.images.length > 4" class="local-card__thumb-more">
             +{{ local.images.length - 3 }}
@@ -144,7 +145,7 @@ function openLightbox(index = 0) {
     border: none;
     padding: 0;
 
-    img {
+    :deep(img) {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -152,7 +153,7 @@ function openLightbox(index = 0) {
       display: block;
     }
 
-    &:hover img { transform: scale(1.04); }
+    &:hover :deep(img) { transform: scale(1.04); }
 
     &:hover .local-card__img-hint { opacity: 1; }
   }
@@ -226,7 +227,7 @@ function openLightbox(index = 0) {
     padding: 0;
     display: block;
 
-    img {
+    .base-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -234,7 +235,7 @@ function openLightbox(index = 0) {
       display: block;
     }
 
-    &:hover img { transform: scale(1.06); opacity: 0.85; }
+    &:hover :deep(img) { transform: scale(1.06); opacity: 0.85; }
   }
 
   // "+N" overlay
