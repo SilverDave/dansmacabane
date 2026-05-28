@@ -59,6 +59,8 @@ function onError() { error.value  = true }
 </template>
 
 <style lang="scss" scoped>
+@use "sass:color";
+
 .base-img {
   position: relative;
   width: 100%;
@@ -72,7 +74,7 @@ function onError() { error.value  = true }
     background: linear-gradient(
       90deg,
       $color-surface         0%,
-      lighten($color-surface, 4%) 40%,
+      color.adjust($color-surface, $lightness: 4%),
       $color-surface         80%
     );
     background-size: 200% 100%;
