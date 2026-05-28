@@ -183,8 +183,8 @@
       "title": "Locaux — Dans Ma Cabane",
       "description": "Des espaces de répétition insonorisés, équipés et accessibles à Liège."
     },
-    "booking": {
-      "title": "Booking & Contact — Dans Ma Cabane",
+    "contact": {
+      "title": "Contact — Dans Ma Cabane",
       "description": "Réserve ton local ou contacte-nous pour toute question."
     }
   }

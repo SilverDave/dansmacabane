@@ -208,7 +208,7 @@ function onItemClick(item: MediaItem, index: number) {
 
 <style lang="scss" scoped>
 .common-gallery {
-  padding-block: $space-24;
+  padding-top: $space-24;
 
   &__inner {
     display: flex;

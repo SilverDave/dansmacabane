@@ -201,7 +201,7 @@ const { t } = useI18n()
       width: clamp(8rem, 15vw, 12rem);
       margin: 0 $space-8 0 0;
 
-       @include max-xs {
+       @include max-xxs {
         display: none;
        }
     }

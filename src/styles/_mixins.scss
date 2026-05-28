@@ -5,6 +5,7 @@
 // =============================================================================
 
 // Responsive breakpoints
+@mixin xxs { @media (min-width: #{$bp-xxs}) { @content; } }
 @mixin xs { @media (min-width: #{$bp-xs}) { @content; } }
 @mixin sm { @media (min-width: #{$bp-sm}) { @content; } }
 @mixin md { @media (min-width: #{$bp-md}) { @content; } }
@@ -12,6 +13,7 @@
 @mixin xl { @media (min-width: #{$bp-xl}) { @content; } }
 @mixin xxl { @media (min-width: #{$bp-xxl}) { @content; } }
 
+@mixin max-xxs { @media (max-width: #{$bp-xxs - 1px}) { @content; } }
 @mixin max-xs { @media (max-width: #{$bp-xs - 1px}) { @content; } }
 @mixin max-sm { @media (max-width: #{$bp-sm - 1px}) { @content; } }
 @mixin max-md { @media (max-width: #{$bp-md - 1px}) { @content; } }

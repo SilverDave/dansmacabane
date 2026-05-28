@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useBookingForm } from '@/composables/useBookingForm'
+import LocalesInfo from '@/components/sections/LocalesInfo.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import BaseInput from '@/components/common/BaseInput.vue'
 
@@ -98,21 +99,8 @@ const projectTypes = ['repetition', 'autre'] as const
           </form>
         </div>
 
-        <!-- ── Info ─────────────────────────────────── -->
-        <aside class="contact__info">
-          <h2 class="contact__info-title">{{ t('contact.info.title') }}</h2>
-
-          <dl class="contact__info-list">
-            <div class="contact__info-item">
-              <dt>{{ t('contact.info.address') }}</dt>
-              <dd>Liège, Belgique</dd>
-            </div>
-            <div class="contact__info-item">
-              <dt>{{ t('contact.info.email') }}</dt>
-              <dd><a href="mailto:dansmacabane@gmail.com">dansmacabane@gmail.com</a></dd>
-            </div>
-          </dl>
-        </aside>
+        <!-- ── Locales Info ─────────────────────────────────── -->
+        <LocalesInfo />
 
       </div>
     </div>
@@ -126,12 +114,6 @@ const projectTypes = ['repetition', 'autre'] as const
   &__layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $space-16;
-
-    @include lg {
-      grid-template-columns: 2fr 1fr;
-      align-items: start;
-    }
   }
 
   // ── Form ─────────────────────────────────────────────────
@@ -197,54 +179,6 @@ const projectTypes = ['repetition', 'autre'] as const
       background: rgba($color-red, 0.1);
       color: $color-red;
       border: 1px solid rgba($color-red, 0.3);
-    }
-  }
-
-  // ── Info ─────────────────────────────────────────────────
-  &__info {
-    background: $color-surface;
-    border: 1px solid $color-border;
-    border-radius: $radius-md;
-    padding: $space-8;
-    position: sticky;
-    top: calc(#{$nav-height} + #{$space-8});
-  }
-
-  &__info-title {
-    font-family: $font-display;
-    font-size: 2rem;
-    margin-bottom: $space-6;
-    color: $color-accent;
-  }
-
-  &__info-list {
-    display: flex;
-    flex-direction: column;
-    gap: $space-4;
-  }
-
-  &__info-item {
-    padding-bottom: $space-4;
-    border-bottom: 1px solid $color-border;
-
-    &:last-child { border-bottom: none; }
-
-    dt {
-      @include heading-ui(0.65rem, 700);
-      color: $color-text-muted;
-      margin-bottom: $space-1;
-    }
-
-    dd {
-      @include text-mono(0.85rem);
-      color: $color-text;
-      line-height: 1.5;
-
-      a {
-        color: $color-accent;
-        text-decoration: none;
-        &:hover { text-decoration: underline; }
-      }
     }
   }
 }
