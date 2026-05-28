@@ -202,7 +202,7 @@ const { t } = useI18n()
       margin: 0 $space-8 0 0;
 
        @include max-xxs {
-        display: none;
+          margin: 0 $space-3 0 0;
        }
     }
   }
